@@ -9,7 +9,13 @@ var fromSaved=false;
 //search weather
 function searchWeather(event){
     event.preventDefault();
-    var cityName=cityIDEl.value;
+    
+    var city=cityIDEl.value;
+    //making sure the entered format of cities matches the format saves in the array
+    const cityName=    city.split(' ')
+                        .map(w => w[0].toUpperCase() + w.substring(1).toLowerCase())
+                        .join(' ');
+    
     console.log("city array has "+ cityArray)
 
     if (cityArray.includes(cityName)){

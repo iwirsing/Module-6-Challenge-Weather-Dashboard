@@ -25,8 +25,11 @@ HTML, CSS, JS with Bootstrap, Jquery were employed to build this application.
 
 
 ## <u>Screenshot</u>
-
+Weather Dashboard:
 ![work day scheduler screenshot](./Assets/images/weatherdash.png)
+
+When a city is duplicated in different letter cases:
+![duplicate alert](./Assets/images/duplicateCity.png)
 
 ## <u>Sources</u> 
 1. https://getbootstrap.com/docs/4.5/getting-started/introduction/
