@@ -178,7 +178,7 @@ function displayForecast(date,weather,temp, wind,humidity,id,icon){
     console.log(id);
 
     //clear container
-    document.querySelector(id).textContent="";
+    $(id).empty();
 
     //variables
     var weatherList=document.createElement("ul");
@@ -188,17 +188,19 @@ function displayForecast(date,weather,temp, wind,humidity,id,icon){
     weatherIcon.setAttribute("src",getIconURL);
 
     //check weather
-    if(weather==="Clouds"){
-        document.querySelector(id).setAttribute("style","background-color:#c5c5c5");
-    }
-    if(weather==="Clear"){
-        document.querySelector(id).setAttribute("style","background-color:#ffdd76");
-    }
-    if((weather==="Rain")||(weather==="Thunderstorm")){
-        document.querySelector(id).setAttribute("style","background-color:#8989ff");
-    }
-    if(weather==="Snow"){
-        document.querySelector(id).setAttribute("style","background-color:white");
+    if (weather!=null){
+        if(weather==="Clouds"){
+            document.querySelector(id).setAttribute("style","background-color:#c5c5c5");
+        }
+        if(weather==="Clear"){
+            document.querySelector(id).setAttribute("style","background-color:#ffdd76");
+        }
+        if((weather==="Rain")||(weather==="Thunderstorm")){
+            document.querySelector(id).setAttribute("style","background-color:#8989ff");
+        }
+        if(weather==="Snow"){
+            document.querySelector(id).setAttribute("style","background-color:white");
+        }
     }
     
     //convert Kelvin to F
@@ -292,16 +294,19 @@ initializePage();
 searchBtnEl.on("click", searchWeather);
 
 //delete cities button click
-$("#delBtn").on("click",function(event){
+$(document).on("click",".delBtn",function(event){
     event.preventDefault();
-    console.log("clicked");
+    
     //delete local storage
     localStorage.removeItem("savedCities");
     //hide delete button
     document.querySelector("#delBtn").setAttribute("style","display:none");
-    //delete the cities
+    //delete the cities and empty array 
     document.querySelector("#savedCities").innerHTML="";
     cityArray=[];
+    //clear display
+    todayWeatherEl.innerHTML="";
+    $("#5Day").empty();
     initializePage();
 });
 

@@ -18,6 +18,7 @@ header{
 h1, h2 {
     color: white;
     margin: auto;
+    text-shadow: 2px 2px 2px black;
 }
 
 /* search button */
