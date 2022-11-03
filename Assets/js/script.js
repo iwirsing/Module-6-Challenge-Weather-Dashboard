@@ -19,6 +19,8 @@ function searchWeather(event){
     fromSaved=false;
     fetchCoordinates(cityName,fromSaved);
     }
+    //empty input
+    cityIDEl.value="";
 }
 // FUNCTION 1: get the coordinates of the cities
 function fetchCoordinates(cityName,isItSaved){
@@ -285,11 +287,12 @@ $("#delBtn").on("click",function(event){
     document.querySelector("#delBtn").setAttribute("style","display:none");
     //delete the cities
     document.querySelector("#savedCities").innerHTML="";
+    cityArray=[];
     initializePage();
 });
 
 //saved city buttons click
-$(".cityBtn").on("click",function(event)
+$(document).on("click",".cityBtn",function(event)
 {
     event.preventDefault();
     var city = event.currentTarget.innerText;
