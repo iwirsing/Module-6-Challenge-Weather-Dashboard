@@ -31,7 +31,7 @@ function searchWeather(event){
 // FUNCTION 1: get the coordinates of the cities
 function fetchCoordinates(cityName,isItSaved){
      //get coordinates of place
-     var coordinatesURL="http://api.openweathermap.org/geo/1.0/direct?q="+cityName+"&limit=1&appid=c8a02479b2ade74cf8b10337c300e1d5";
+     var coordinatesURL="https://api.openweathermap.org/geo/1.0/direct?q="+cityName+"&limit=1&appid=c8a02479b2ade74cf8b10337c300e1d5";
      console.log(coordinatesURL);
      
      //fetch coordinates
@@ -116,7 +116,7 @@ function displayToday(city,date,weather,temp, wind,humidity,icon){
 
     //variables
     var weatherIcon=document.createElement("img");
-    var getIconURL="http://openweathermap.org/img/wn/"+icon+"@2x.png"
+    var getIconURL="https://openweathermap.org/img/wn/"+icon+"@2x.png"
     weatherIcon.setAttribute("src",getIconURL);
 
     //check weather and set background color for the element to reflect weather
@@ -180,7 +180,7 @@ function displayForecast(date,weather,temp, wind,humidity,id,icon){
     var weatherList=document.createElement("ul");
     var forecastHeader=document.createElement("h6");
     var weatherIcon=document.createElement("img");
-    var getIconURL="http://openweathermap.org/img/wn/"+icon+".png"
+    var getIconURL="https://openweathermap.org/img/wn/"+icon+".png"
     weatherIcon.setAttribute("src",getIconURL);
 
     //check weather
