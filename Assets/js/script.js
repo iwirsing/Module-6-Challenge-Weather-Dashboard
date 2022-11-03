@@ -78,7 +78,7 @@ function getWeather(lat, lon, isItSaved){
             //display the 5 day forecast
             for (var j=1;j<6;j++){
                 var dayID="#Day"+(j);
-                var i=(9+(j*6));
+                var i=(j*7);
                 
                 //set date
                 var daysAfter=momentToday;
@@ -152,6 +152,9 @@ function displayToday(city,date,weather,temp, wind,humidity,icon){
     //populate weather parameters in a list
     var weatherList=document.createElement("ul");
     weatherList.setAttribute("style","list-style-type: none; margin: 0; padding:0");
+    //weather in words
+    var weatherWords=document.createElement("li");
+    weatherWords.textContent=weather;
     //temperature
     var temperature=document.createElement("li");
     temperature.textContent="Temp: "+tempF+" F";
@@ -163,6 +166,7 @@ function displayToday(city,date,weather,temp, wind,humidity,icon){
     humidData.textContent="Humidity: "+humidity+"%";
 
     //append list elements to DOM
+    weatherList.appendChild(weatherWords);
     weatherList.appendChild(temperature);
     weatherList.appendChild(windSpeed);
     weatherList.appendChild(humidData);
@@ -212,6 +216,9 @@ function displayForecast(date,weather,temp, wind,humidity,id,icon){
 
     //populate weather parameters
     weatherList.setAttribute("style","list-style-type: none; margin: 0; padding:0");
+    //weather in words
+    var weatherWords=document.createElement("li");
+    weatherWords.textContent=weather;
     //temperature
     var temperature=document.createElement("li");
     temperature.textContent="Temp: "+tempF+" F";
@@ -223,6 +230,7 @@ function displayForecast(date,weather,temp, wind,humidity,id,icon){
     humidData.textContent="Humidity: "+humidity+"%";
   
     //append elements
+    weatherList.appendChild(weatherWords);
     weatherList.appendChild(temperature);
     weatherList.appendChild(windSpeed);
     weatherList.appendChild(humidData);
