@@ -1,0 +1,51 @@
+body{
+    background-image:url("../images/worldmap.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+header{
+    background-image: linear-gradient(to right, #5e454b, black);
+    width:100%;
+}
+
+.row{
+    margin-left:0;
+    margin-right:0;
+}
+
+
+h1, h2 {
+    color: white;
+    margin: auto;
+}
+
+#searchBtn{
+    background-color:  #cee5d0;
+    border:none;
+}
+#delBtn{
+    background-color: #931837;
+    border:none;
+}
+
+#todayWeather{
+    /* border: 1px solid black; */
+    border-radius: 1rem;
+    margin-left:auto;
+    width:100%;
+}
+
+#\5Day{
+    margin-left: 0 !important;
+
+}
+
+.col-2 {
+    /* border: 1px solid black; */
+    /* justify-content: space-between; */
+    margin-left:auto;
+    border-radius: .5rem;
+}
+
