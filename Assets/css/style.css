@@ -4,7 +4,6 @@ body{
     background-size: cover;
 }
 
-
 header{
     background-image: linear-gradient(to right, #5e454b, black);
     width:100%;
@@ -21,17 +20,27 @@ h1, h2 {
     margin: auto;
 }
 
+/* search button */
 #searchBtn{
-    background-color:  #cee5d0;
+    background-color: #3fab9b ;
     border:none;
 }
+#searchBtn:hover{
+background-color: #cee5d0;
+}
+
+/* delete button */
 #delBtn{
     background-color: #931837;
     border:none;
 }
 
+#delBtn:hover{
+    background-color: #d52350;
+    border:none;
+}
+
 #todayWeather{
-    /* border: 1px solid black; */
     border-radius: 1rem;
     margin-left:auto;
     width:100%;
@@ -39,13 +48,17 @@ h1, h2 {
 
 #\5Day{
     margin-left: 0 !important;
-
 }
 
 .col-2 {
-    /* border: 1px solid black; */
-    /* justify-content: space-between; */
     margin-left:auto;
     border-radius: .5rem;
+}
+
+/* hover for saved cities button */
+.cityBtn:hover{
+    background-color:#f3f0d7 ;
+    border:none;
+    color: black;
 }
 
